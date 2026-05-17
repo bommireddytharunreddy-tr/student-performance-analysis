@@ -1,12 +1,13 @@
-@app.route("/")
-def home():
-    return "Student Performance Backend Running Successfully"
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 from analysis import get_student_data
 
 app = Flask(__name__)
 CORS(app)
+@app.route("/")
+def home():
+    return "Student Performance Backend Running Successfully"
 
 @app.route("/students", methods=["GET"])
 def students():
